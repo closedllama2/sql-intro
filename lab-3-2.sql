@@ -1,5 +1,7 @@
 -- For each team, what is the average number of wins per season, in the 21st century?
 
+SELECT name, AVG(wins) from teams WHERE year > 2000 GROUP BY 1;
+
 -- Expected result:
 --
 -- +-------------------------------+------------------+

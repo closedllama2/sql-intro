@@ -7,6 +7,14 @@
 
 -- Expected result: 47 rows starting with
 --
+SELECT p.first_name, p.last_name
+FROM players as p
+LEFT JOIN stats as s
+on p.id = s.player_id
+LEFT JOIN teams as t
+on t.id = s.team_id
+WHERE t.year = 2020 AND t.name = "Chicago Cubs"
+ORDER BY p.last_name;
 -- +------------+-----------+
 -- | Jason      | Adam      |
 -- | Albert     | Almora    |
