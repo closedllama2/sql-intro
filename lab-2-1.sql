@@ -1,3 +1,4 @@
+SELECT year, name, wins FROM teams WHERE wins > 100 ORDER BY Year;
 -- What teams in history have won more than 100 games in a single
 -- season, chronologically?
 
